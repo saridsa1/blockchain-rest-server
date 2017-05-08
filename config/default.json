@@ -1,0 +1,9 @@
+{
+
+  "iandd-rest-server" : {
+    "connectionProfileName":"defaultProfile",
+    "networkIdentifier":"com.novartis.iandd",
+    "enrollmentId":"WebAppAdmin",
+    "enrollmentSecret":"DJY27pEnl16d"
+  }
+}
