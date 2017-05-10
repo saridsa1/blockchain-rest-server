@@ -17,12 +17,16 @@ server.post('/authenticate', function(req, res, next){
     if(!req.is('application/json')){
         res.send(500, {"Error": "This service accepts content-type application.json"});
     }
-
-    let participantId = req.params.participantId;
+    res.json({'participantType':'com.novartis.iandd.Prescriber', 'participantId': 'PRSC:61478f05-1f27-4b33-a2eb-44ca2b576878'});
+    /**
+    res.json({'participantType':'com.novartis.iandd.Patient', 'participantId': 'PAT:5513718e-0f2e-4da0-ab87-d2e15de5c2a5'});
+    res.json({'participantType':'com.novartis.iandd.Insurer', 'participantId': 'INSR:46c66272-d9d8-48cc-a013-1bffb9fdb157'});
+    */
+    /*let participantId = req.params.participantId;
     let participantPwd = req.params.participantPassword;
     let connectionProfile = config.get('connectionProfileName');
     let businessNetworkIdentifier = config.get('networkIdentifier');
-
+    console.log(participantId, participantPwd, connectionsProfile, 
     businessNetworkConnection.connect(connectionProfile, businessNetworkIdentifier, participantId, participantPwd).then(function(result){
       businessNetworkDefinition = result;
       console.log('Connected: BusinessNetworkDefinition obtained=' + businessNetworkDefinition.getIdentifier());
@@ -34,7 +38,7 @@ server.post('/authenticate', function(req, res, next){
           businessNetworkConnection.disconnect();
           next(error);
       })
-    });
+    });*/
     
 
 })
